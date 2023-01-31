@@ -9,10 +9,18 @@ import { environment } from '../environments/environment';
 import { provideAuth,getAuth } from '@angular/fire/auth';
 import {AppFirebaseModule} from './shared/app-firebase/app-firebase.module';
 import {AppMaterialModule} from './shared/app-material/app-material.module';
+import {CreateComponent} from './components/create/create.component';
+import {FeedComponent} from './components/feed/feed.component';
+import {HeaderComponent} from './components/header/header.component';
+import {ProfileCardComponent} from './components/profile-card/profile-card.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CreateComponent,
+    FeedComponent,
+    HeaderComponent,
+    ProfileCardComponent
   ],
   imports: [
     BrowserModule,
