@@ -1,0 +1,77 @@
+{
+  "root": true,
+  "ignorePatterns": [
+    "projects/**/*"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "*.ts"
+      ],
+      "parserOptions": {
+        "project": [
+          "tsconfig.json",
+          "e2e/tsconfig.json"
+        ],
+        "createDefaultProgram": true
+      },
+      "extends": [
+        "plugin:@angular-eslint/recommended",
+        "plugin:@angular-eslint/template/process-inline-templates"
+      ],
+      "rules": {
+        "@angular-eslint/component-selector": [
+          "error",
+          {
+            "prefix": "myvf",
+            "style": "kebab-case",
+            "type": "element"
+          }
+        ],
+        "@angular-eslint/directive-selector": [
+          "error",
+          {
+            "prefix": "myvf",
+            "style": "camelCase",
+            "type": "attribute"
+          }
+        ],
+        "@angular-eslint/no-empty-lifecycle-method": "off",
+        "@angular-eslint/no-output-on-prefix": "off",
+        "curly": "error",
+        "eol-last": "error",
+        "guard-for-in": "error",
+        "indent": ["error", 2],
+        "no-labels": "error",
+        "no-caller": "error",
+        "no-bitwise": "error",
+        "no-console":["error", { "allow": ["log", "group", "groupEnd", "warn", "error"] }],
+        "no-new-wrappers": "error",
+        "no-debugger":"error",
+        "no-empty": "error",
+        "no-eval": "error",
+        "no-shadow": "off",
+        "no-throw-literal": "error",
+        "no-fallthrough": "error",
+        "no-trailing-spaces": "error",
+        "no-new": "error",
+        "no-var": "error",
+        "prefer-const": "error",
+        "quotes": ["error", "single"],
+        "semi": "error",
+        "eqeqeq": ["error", "always", {"null": "ignore"}]
+      }
+    },
+    {
+      "files": [
+        "*.html"
+      ],
+      "extends": [
+        "plugin:@angular-eslint/template/recommended"
+      ],
+      "rules": {
+        "@angular-eslint/template/eqeqeq": "off"
+      }
+    }
+  ]
+}
